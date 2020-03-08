@@ -1,6 +1,6 @@
 body {
     font-family: 'Gothic A1', sans-serif;
-    background: #6cf;
+    background: #D8BFD8;
 }
 
 .container {
@@ -12,7 +12,7 @@ body {
     transform: translateX(-50%) translateY(-50%);
     background: rgba(255, 255, 255, 0.5);
     padding: 20px;
-    border: 1px solid #08038C;
+    border: 1px solid #4B0082;
     box-shadow: 0 0 8px 3px #fff;
 }
 
@@ -22,13 +22,13 @@ body {
     font-family: 'Nanum Myeongjo', serif;
     font-size: 40px;
     /* text-transform: uppercase; */
-    color: #08038C;
+    color: #4B0082;
 }
 
 .question {
     padding: 20px;
     font-size: 20px;
-    background: #08038C;
+    background: #4B0082;
     border-radius: 20px;
     margin: 10px 0 10px 0;
     color: #f6f6f6;
@@ -46,7 +46,7 @@ body {
 }
 
 .option:hover {
-    background: #08038C;
+    background: #4B0082;
     color: #f6f6f6;
 }
 
@@ -64,7 +64,7 @@ body {
 }
 
 .next-btn:hover {
-    background: #08038C;
+    background: #4B0082;
     color: #f6f6f6;
 }
 
@@ -75,6 +75,6 @@ body {
 }
 
 .option input:checked .option {
-    background: #08038C;
+    background: #4B0082;
     color: #000;
 }

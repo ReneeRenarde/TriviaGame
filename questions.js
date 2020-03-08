@@ -102,5 +102,5 @@ var questions = [{
         "option2": "The albatross",
         "option3": "The bald eagle",
         "option4": "The king penguin",
-        "answer": "2"
+        "answer": "1"
 }]

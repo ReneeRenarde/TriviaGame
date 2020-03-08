@@ -40,7 +40,7 @@ function loadNextQuestion () {
     if(currentQuestion == totalQues) {
         container.style.display='none';
         resultCont.style.display = '';
-        resultCont.textContent = 'Your Score: ' + score;
+        resultCont.textContent = 'Your Score: ' + score + ' out of 15';
         return;
     }
 
