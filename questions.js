@@ -25,7 +25,7 @@ var questions = [{
         "option2": "The greyhound",
         "option3": "The lion",
         "option4": "The pronghorn",
-        "answer": "2"
+        "answer": "1"
 }, {
         "question": "What type of animal is a Mexican hairless?",
         "option1": "A cat",
