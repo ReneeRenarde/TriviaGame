@@ -20,14 +20,14 @@ body {
     padding-top: 20px;
     text-align: center;
     font-family: 'Nanum Myeongjo', serif;
-    font-size: 36px;
+    font-size: 40px;
     /* text-transform: uppercase; */
     color: #08038C;
 }
 
 .question {
     padding: 20px;
-    font-size: 22px;
+    font-size: 20px;
     background: #08038C;
     border-radius: 20px;
     margin: 10px 0 10px 0;
@@ -71,7 +71,7 @@ body {
 .result {
     height: 100px;
     text-align: center;
-    font-size: 75px;
+    font-size: 60px;
 }
 
 .option input:checked .option {

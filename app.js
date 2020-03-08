@@ -28,7 +28,7 @@ function loadNextQuestion () {
         return;
     }
 
-    var answer = selectedOption.nodeValue;
+    var answer = selectedOption.value;
     if(questions[currentQuestion].answer == answer){
         score ++;
     }
