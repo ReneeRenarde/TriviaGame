@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-    height: 330px;
+    height: 360px;
     width: 1000px;
     position: absolute;
     top: 50%;
@@ -21,7 +21,6 @@ body {
     text-align: center;
     font-family: 'Nanum Myeongjo', serif;
     font-size: 40px;
-    /* text-transform: uppercase; */
     color: #4B0082;
 }
 

@@ -1,5 +1,5 @@
-var currentQuestion =0;
-var score =0;
+var currentQuestion = 0;
+var score = 0;
 var totalQues = questions.length;
 
 var container = document.getElementById('quizContainer');
@@ -8,12 +8,12 @@ var opt1 = document.getElementById('opt1');
 var opt2 = document.getElementById('opt2');
 var opt3 = document.getElementById('opt3');
 var opt4 = document.getElementById('opt4');
-var nextButton= document.getElementById('nextButton');
-var resultCont =document.getElementById('result');
+var nextButton = document.getElementById('nextButton');
+var resultCont = document.getElementById('result');
 
-function loadQuestion (questionIndex) {
+function loadQuestion(questionIndex) {
     var q = questions[questionIndex];
-    quesEle.textContent = (questionIndex +1) + '. ' + q.question;
+    quesEle.textContent = (questionIndex + 1) + '. ' + q.question;
     opt1.textContent = q.option1;
     opt2.textContent = q.option2;
     opt3.textContent = q.option3;
@@ -21,24 +21,24 @@ function loadQuestion (questionIndex) {
 
 };
 
-function loadNextQuestion () {
+function loadNextQuestion() {
     var selectedOption = document.querySelector('input[type=radio]:checked')
-    if(!selectedOption) {
+    if (!selectedOption) {
         alert('Please choose an answer');
         return;
     }
 
     var answer = selectedOption.value;
-    if(questions[currentQuestion].answer == answer){
-        score ++;
+    if (questions[currentQuestion].answer == answer) {
+        score++;
     }
     selectedOption.checked = false;
     currentQuestion++;
-    if(currentQuestion == totalQues -1) {
+    if (currentQuestion == totalQues - 1) {
         nextButton.textContent = 'Finish';
     }
-    if(currentQuestion == totalQues) {
-        container.style.display='none';
+    if (currentQuestion == totalQues) {
+        container.style.display = 'none';
         resultCont.style.display = '';
         resultCont.textContent = 'Your Score: ' + score + ' out of 15';
         return;
@@ -47,3 +47,5 @@ function loadNextQuestion () {
     loadQuestion(currentQuestion);
 }
 loadQuestion(currentQuestion);
+
+// this is where I'd add the time function if i could figure out how...
