@@ -1,6 +1,8 @@
 var currentQuestion = 0;
 var score = 0;
 var totalQues = questions.length;
+var timer = 120;
+var timeInterval;
 
 var container = document.getElementById('quizContainer');
 var quesEle = document.getElementById('question');
@@ -29,23 +31,50 @@ function loadNextQuestion() {
     }
 
     var answer = selectedOption.value;
-    if (questions[currentQuestion].answer == answer) {
+    if (questions[currentQuestion].answer === answer) {
         score++;
     }
     selectedOption.checked = false;
     currentQuestion++;
-    if (currentQuestion == totalQues - 1) {
+    if (currentQuestion === totalQues - 1) {
         nextButton.textContent = 'Finish';
     }
-    if (currentQuestion == totalQues) {
+    if (currentQuestion === totalQues) {
         container.style.display = 'none';
         resultCont.style.display = '';
         resultCont.textContent = 'Your Score: ' + score + ' out of 15';
+        clearInterval(timeInterval);
         return;
     }
 
     loadQuestion(currentQuestion);
 }
-loadQuestion(currentQuestion);
 
-// this is where I'd add the time function if i could figure out how...
+function startGame(){
+    timer = 120;
+    score=0;
+    currentQuestion=0;
+
+    timeInterval = setInterval(function () { 
+        if (timer > 0){
+            timer--;
+            document.getElementById('timer').textContent = timer;
+        }
+    
+        else {
+            container.style.display = 'none';
+            resultCont.style.display = '';
+            resultCont.textContent = 'Your Score: ' + score + ' out of 15';
+            clearInterval(timeInterval);
+        }
+        
+    }, 1000);
+
+    loadQuestion(currentQuestion);
+}
+
+startGame();
+
+
+// work on displaying results 
+// add reset button --> call startGame(); in there to reset
